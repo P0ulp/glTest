@@ -27,8 +27,7 @@ void draw() {
   PGraphics3D g3 = (PGraphics3D)g;
   matShader = g3.modelviewInv.get();
   matShader.transpose();
-  matShader.print();
-  cubemapShader.set("matShader", matShader);
+  cubemapShader.set("modelviewInv", matShader);
   box(50);
   popMatrix();
   resetShader(); 
